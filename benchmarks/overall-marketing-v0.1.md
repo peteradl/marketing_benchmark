@@ -4,12 +4,14 @@ title: ADL Overall Marketing Benchmark
 benchmark_id: overall_marketing
 version: 0.1
 created: 2026-09-10
-status: draft-for-team-validation
+status: superseded
 owner: ADL Marketing
 composite_publication: not-authorized
 ---
 
 # ADL Overall Marketing Benchmark v0.1
+
+> Historical proposal, superseded by [v0.2](overall-marketing-v0.2.md). Do not use the proposed composite below for current reporting.
 
 ## 1. Purpose
 

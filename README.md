@@ -17,3 +17,7 @@ These are sourced snapshots, not a live agent connection. Publication holds are 
 `npm start` serves the repository on port 4173. `npm test` validates report safeguards. `npm run validate` checks marketing snapshots. Add a new report using `npm run import-report -- /path/to/report.json`, then review and push to main to deploy it. Existing dates cannot be overwritten by the importer. Automatic delivery from the benchmark agent still needs integration.
 
 Canonical benchmark: https://docs.google.com/document/d/124n4bxGXto5LFlKoPcD1w2bZSAKcDdlY1BYtkYmhQlo/edit
+
+## Current overall benchmark
+
+[Overall Marketing Benchmark v0.2](benchmarks/overall-marketing-v0.2.md) defines four separate assessments: message and brand quality, audience attention, relevant relationships, and action/conversion. It supersedes the v0.1 composite proposal. The dashboard UI and agent pipeline still need migration to this contract. Drive synchronization is pending connector recovery; do not assume the agents’ Drive copy has updated.
