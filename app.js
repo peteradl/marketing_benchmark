@@ -1,264 +1,35 @@
-const dashboard = {
-  title: 'LinkedIn IC Engagement Benchmark',
-  version: '0.1',
-  status: 'draft-for-team-validation',
-  rubricUrl: 'https://github.com/peteradl/marketing_benchmark/blob/main/benchmarks/linkedin-ic-engagement-v0.1.md',
-  window: {
-    start: '2026-09-03T21:06:00.000Z',
-    end: '2026-09-10T21:06:00.000Z',
-    timezone: 'America/New_York'
-  },
-  coverage: {
-    level: 'Partial',
-    collectionStatus: 'observed_evidence_partial',
-    gradingStatus: 'model_assessed_requires_review',
-    captureCount: 20,
-    eligibleEvents: 0
-  },
-  metrics: [
-    { key: 'breadth', label: 'Qualified breadth', value: null, target: 'Target: 3+' },
-    { key: 'points', label: 'Weighted engagement points', value: null, target: 'Target: 6.0+' },
-    { key: 'depth', label: 'Deep conversations', value: null, target: 'Target: 1+' },
-    { key: 'stewardship', label: 'Stewardship rate', value: null, target: 'Target: 80%+' },
-    { key: 'persistence', label: '28-day repeat rate', value: null, target: 'Target: 25%+' }
-  ],
-  people: [
-    {
-      id: 'nol',
-      initials: 'NB',
-      name: 'Nolan Browne',
-      profile: 'linkedin.com/in/nolbro',
-      breadth: null,
-      points: null,
-      depth: null,
-      stewardship: null,
-      status: 'Not publishable'
-    },
-    {
-      id: 'colby',
-      initials: 'CS',
-      name: 'Colby Swanson',
-      profile: 'linkedin.com/in/colbyswanson',
-      breadth: null,
-      points: null,
-      depth: null,
-      stewardship: null,
-      status: 'Not publishable'
-    }
-  ],
-  evidence: [
-    {
-      target: 'nol',
-      profile: 'Nolan Browne',
-      excerpt: 'ADMARES is an interesting example of where this thinking could lead.',
-      url: 'https://www.linkedin.com/in/nolbro/recent-activity/all/',
-      eventTime: 'Unresolved relative date',
-      review: 'Needs review',
-      result: 'Time uncertain'
-    },
-    {
-      target: 'colby',
-      profile: 'Colby Swanson',
-      excerpt: 'NAVFAC is asking industry how industrialized construction can deliver new barracks 30% faster and 20% cheaper at Camp Pendleton.',
-      url: 'https://www.linkedin.com/in/colbyswanson/recent-activity/all/',
-      eventTime: 'Relative label: 1d',
-      review: 'Needs review',
-      result: 'Time uncertain'
-    }
-  ]
-};
-
-const rubric = {
-  relevance: {
-    title: 'Relevance qualifies the participant',
-    copy: 'A participant is Qualified only when at least two of three evidence-backed signals are present. Missing evidence remains null.',
-    items: [
-      ['Signal 1', 'Relevant organization or role', 'Works in or materially supports an IC deployment system.'],
-      ['Signal 2', 'IC experience', 'Public evidence shows direct Industrialized Construction experience.'],
-      ['Signal 3', 'Authority', 'Can shape, fund, approve, procure, regulate, publish, or convene.'],
-      ['Threshold', 'Two of three', 'Only Qualified participants enter benchmark totals.']
-    ]
-  },
-  influence: {
-    title: 'Influence weights a qualified conversation',
-    copy: 'Use the lowest tier supported by current public evidence. Job-title seniority alone is not enough.',
-    items: [
-      ['1.00x', 'Relevant practitioner', 'Credible field participation without broader authority evidence.'],
-      ['1.25x', 'Field shaper', 'Demonstrated technical, founder, research, media, or convening influence.'],
-      ['1.50x', 'Ecosystem decision-maker', 'Directs capital, procurement, policy, standards, or deployment.'],
-      ['null', 'Unverified', 'Included in breadth, excluded from weighted points.']
-    ]
-  },
-  depth: {
-    title: 'Depth measures what the conversation did',
-    copy: 'Score the highest observable level reached in one participant-conversation. Length alone never raises depth.',
-    items: [
-      ['1', 'Signal', 'Brief but on-topic acknowledgement or answer.'],
-      ['2', 'Substance', 'Question, example, fact, experience, or useful counterpoint.'],
-      ['3', 'Dialogue', 'Substantive two-way exchange or meaningful follow-up.'],
-      ['4', 'Activation', 'Specific next step, resource, introduction, meeting, or collaboration.']
-    ]
-  },
-  coverage: {
-    title: 'Coverage controls whether results can be published',
-    copy: 'Coverage is confidence, not performance. It never adds points and cannot be replaced by a system completeness flag.',
-    items: [
-      ['Unknown', 'No result', 'Collector status or target coverage was not established.'],
-      ['Partial', 'Evidence only', 'Material gaps or unresolved dates block numeric results.'],
-      ['Substantial', 'Known subtotal', 'Publish with a qualifier; do not claim completeness.'],
-      ['Verified', 'Full scorecard', 'All target surfaces, conversations, and event times are verified.']
-    ]
-  },
-  persistence: {
-    title: 'Persistence shows relationship continuity',
-    copy: 'Use a rolling 28-day window. Repetition in one thread is not persistence, and the rate waits for four qualifying weeks.',
-    items: [
-      ['2+', 'Distinct conversations', 'The participant appears in more than one conversation.'],
-      ['2+', 'Distinct days', 'The relationship is visible beyond one burst of activity.'],
-      ['28d', 'Rolling window', 'The denominator is all unique Qualified participants.'],
-      ['25%+', 'Pilot target', 'Repeat Qualified participants divided by unique Qualified participants.']
-    ]
-  }
-};
-
-let selectedTarget = 'both';
-
-function valueLabel(value) {
-  return value === null ? '--' : String(value);
+import { dashboard, rubric } from './linkedin.js';
+const view = document.querySelector('#view');
+const selector = document.querySelector('#run');
+let data;
+const esc = s => String(s).replace(/[&<>"']/g, c => ({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]));
+const link = (url, text) => `<a href="${esc(/^https:\/\//.test(url) ? url : '#')}" target="_blank" rel="noopener">${esc(text)} ↗</a>`;
+const tag = (text, type='') => `<span class="tag ${type}">${esc(text)}</span>`;
+const current = () => data.runs.find(r => r.id === selector.value) || data.runs[0];
+function overview(r) {
+ const baseline = r.scores.length ? r : data.runs.find(x => x.scores.length);
+ const scores = baseline?.scores || [];
+ const scoreDate = baseline?.id || 'No scored report';
+ return `<aside class="notice"><div><strong>${r.kind === 'test' ? 'Scoring hold · test run' : 'Artifact results · no combined score'}</strong><p>${esc(r.hold)}</p></div>${link(r.sourceUrl,'Read report')}</aside>
+ <div class="grid"><section class="panel score-panel"><div><p class="eyebrow">THIS REPORT</p><h2>${esc(r.headline)}</h2><p>${esc(r.summary)}</p>${tag(r.window)}</div><div class="ring"><strong>—</strong><span>No composite score</span></div></section><section class="panel"><h3>Evidence & coverage</h3><div class="metric-row"><div>Surface review<small>${esc(r.coverageNote)}</small></div><strong>${esc(r.coverage)}</strong></div><div class="metric-row"><div>Channel analytics<small>${esc(r.analyticsNote)}</small></div>${tag(r.analytics,'warn')}</div><div class="metric-row"><div>Week-over-week movement</div><span>Not available</span></div></section></div>
+ <section class="panel section"><div class="section-head"><div><p class="eyebrow">ARTIFACT SCORECARD</p><h2>${r.scores.length ? 'Scores for this reporting window' : 'Last scored artifacts'}</h2><p>${r.scores.length ? esc(scoreDate) + ' · Results by benchmark family' : esc(scoreDate) + ' · Historical references, not current-period scores'}</p></div>${baseline ? link(baseline.sourceUrl,'Score evidence') : ''}</div><div class="score-list">${scores.slice(0,4).concat(scores.filter(s=>s.family==='Brand consistency')).map(s=>artifact(s)).join('')}</div><details class="section"><summary>View all ${scores.length} available artifact scores</summary><div class="score-list">${scores.map(s=>artifact(s)).join('')}</div></details><p class="fine">Strategy alignment and brand consistency are separate rubrics. No averaging is applied. Missing evidence never becomes a zero score.</p></section>
+ <div class="grid section"><section class="panel"><div class="section-head"><div><p class="eyebrow">NEXT ACTIONS</p><h2>Highest-priority recommendations</h2></div><a href="#recommendations">View all →</a></div>${r.recommendations.slice(0,2).map((x,i)=>recommendation(x,i,r,false)).join('')}</section><section class="panel"><p class="eyebrow">REPORT HISTORY</p><h2>${data.runs.length} snapshots. One learning loop.</h2><p class="subtitle">Select a reporting window to see its findings and recommendations.</p><div class="timeline">${data.runs.map(x=>`<a href="#overview" data-run="${esc(x.id)}">${esc(x.id)}<small>${esc(x.kind==='test'?'Test run · scores withheld':x.kind==='baseline'?'Baseline · artifact scores':'Weekly report · artifact scores')}</small></a>`).join('')}</div><p class="fine">Imported ${esc(data.importedAt)}. Report snapshots do not establish current connector health or live surface status.</p></section></div>`;
 }
+function artifact(s){return `<div class="artifact"><div class="artifact-head">${link(s.url,s.name)}<strong>${s.score}<small> / 100</small></strong></div><div class="bar" aria-hidden="true"><span style="width:${s.score}%;background:${s.score>=85?'#568b71':s.score<55?'#ae6767':'#4f6d83'}"></span></div><p>${esc(s.family)} · ${esc(s.rating)}</p></div>`;}
+function recommendation(x,i,r,full=true){return `<article class="priority"><span class="rank">${String(i+1).padStart(2,'0')}</span><div><h3>${esc(x.title)}</h3><div class="meta">${esc(x.surface)} · Effort: ${esc(x.effort)}</div><p>${esc(x.why)}</p>${full ? `<details><summary>Recommended action & verification</summary><p><strong>Action:</strong> ${esc(x.action)}</p><p><strong>Next-run check:</strong> ${esc(x.verify)}</p><p>${link(r.sourceUrl,'Source report')}</p></details>` : ''}</div>${tag(x.impact,x.impact==='Critical'?'risk':x.impact==='High'?'warn':'')}</article>`;}
+function recommendations(r){return `<div class="wide-title"><p class="eyebrow">FROM THE BENCHMARK AGENT</p><h2>Turn findings into the next improvement.</h2><p>${esc(r.window)}. Recommendations below are sourced from this report; implementation and completion have not been verified.</p></div><section class="panel">${r.recommendations.map((x,i)=>recommendation(x,i,r)).join('')}</section>`;}
+function loop(r){const steps=[['Observe','Brand surfaces + analytics','Collect dated website, LinkedIn, video, and other surface evidence. Record what was covered and what was inaccessible.','Evidence must retain its source and observation window.'],['Compare','Canonical benchmark library','Apply the relevant brand, strategy, channel, or LinkedIn engagement rubric and record its version.','Keep unlike benchmark families separate.'],['Assess','Benchmark agent','Produce supported artifact scores, findings, confidence notes, and ranked recommendations. Withhold results when evidence gates fail.','No evidence means unscored, never zero.'],['Review','Marketing team','Review the recommendations, choose the next actions, and assign accountable owners. Resolve contested evidence before acting.','Human judgment turns a finding into a commitment.'],['Improve','Surface owners','Implement the selected copy, creative, positioning, or measurement changes and preserve evidence of what changed.','A recommendation is not proof of completion.'],['Re-measure','Next weekly run','Revisit the same surfaces, check whether the issue is resolved, and compare like-for-like periods under the same rubric.','Feed verified results into the next round.']];return `<section class="loop-intro"><p class="eyebrow">THE CYBERNETIC LOOP</p><h2>Observe. Compare. Act. Learn.</h2><p>The benchmark is the reference point. The agent detects gaps, the team changes the system, and the next assessment tests whether those changes worked.</p></section><div class="loop-track">${steps.map((s,i)=>`<section class="step"><div class="number"><span>0${i+1}</span><span aria-hidden="true">${i===5?'↺':'→'}</span></div><h2>${s[0]}</h2><h3>${s[1]}</h3><p>${s[2]}</p><small>${s[3]}</small></section>`).join('')}</div><div class="return-path">↺ The next observation closes the loop: record the change, recheck the evidence, and update the recommendation.</div><div class="grid section"><section class="panel"><p class="eyebrow">WHERE THE SELECTED REPORT STANDS</p><h2>${esc(r.headline)}</h2><p>${esc(r.summary)}</p><p class="fine">This describes the intended operating process and the selected report’s evidence. The dashboard does not run the agent or confirm that recommended changes have been completed.</p>${link(r.sourceUrl,'Inspect this run')}</section><section class="panel"><p class="eyebrow">THE REFERENCE POINT</p><h2>Benchmark library</h2><div class="metric-row">${link('https://drive.google.com/file/d/1MiLRKw9MWDphI4cu-hjuqyqHl0G98fFZ/view','Brand consistency v0.1')}</div><div class="metric-row">${link('https://drive.google.com/file/d/18auM5XQCUy5Q6LPSLB950gp9o4J3yA8t/view','Strategy alignment v1.0')}</div><div class="metric-row">${link('https://docs.google.com/document/d/124n4bxGXto5LFlKoPcD1w2bZSAKcDdlY1BYtkYmhQlo/edit','LinkedIn IC engagement v0.1')}</div><p class="fine">Brand and strategy methods remain drafts for approval or validation. LinkedIn numeric targets are pilot targets.</p></section></div><section class="panel section"><p class="eyebrow">LINKEDIN IC ENGAGEMENT · PILOT</p><h2>Relationship quality, measured separately.</h2><div class="pilot-grid"><div><p>Nolan Browne and Colby Swanson each have separate pilot targets. No qualifying engagement report has been imported, so results remain unavailable.</p>${tag('Awaiting reviewed evidence','warn')}</div><div><div class="metric-row"><span>Qualified breadth</span><strong>3+ people</strong></div><div class="metric-row"><span>Weighted engagement</span><strong>6+ points</strong></div><div class="metric-row"><span>Deep conversations</span><strong>1+</strong></div><div class="metric-row"><span>Stewardship</span><strong>80%+</strong></div><div class="metric-row"><span>Four-week repeat participation</span><strong>25%+</strong></div></div></div><p class="fine">Targets per person, not observed results. Persistence needs four qualifying weekly windows. Partial or unknown coverage blocks numeric publication.</p></section>`;}
+function render(){if(!data)return;const tab=['overview','recommendations','linkedin','loop'].includes(location.hash.slice(1))?location.hash.slice(1):'overview';document.querySelectorAll('[data-tab]').forEach(a=>a.setAttribute('aria-current',a.dataset.tab===tab?'page':'false'));view.innerHTML=({overview,recommendations,linkedin,loop}[tab])(current());bindLinkedIn();}
+async function init(){try{const response=await fetch('./data/reports.json',{cache:'no-store'});if(!response.ok)throw new Error('Report unavailable');data=await response.json();if(!data.runs?.length)throw new Error('No reports');data.runs.sort((a,b)=>b.id.localeCompare(a.id));selector.innerHTML=data.runs.map(r=>`<option value="${esc(r.id)}">${esc(r.label)}</option>`).join('');selector.disabled=false;render();}catch{view.innerHTML='<section class="error"><h2>Reports could not be loaded</h2><p>Please try again. No scores are shown until source data is available.</p><button id="retry">Try again</button></section>';document.querySelector('#retry').onclick=init;}}
+selector.addEventListener('change',render);window.addEventListener('hashchange',render);view.addEventListener('click',e=>{const a=e.target.closest('[data-run]');if(a){selector.value=a.dataset.run;render();}});init();
 
-function renderMetrics() {
-  document.querySelector('#metricGrid').innerHTML = dashboard.metrics.map(function (metric) {
-    return [
-      '<article class="metric">',
-      '<div class="metric-label">' + metric.label + '</div>',
-      '<div class="metric-value">' + valueLabel(metric.value) + '</div>',
-      '<div class="metric-target">' + metric.target + '</div>',
-      '<div class="metric-track" aria-hidden="true"><span></span></div>',
-      '</article>'
-    ].join('');
-  }).join('');
+function linkedin(){return `<section class="wide-title"><p class="eyebrow">LINKEDIN IC ENGAGEMENT · V0.1 PILOT</p><h2>Relationship quality across Nolan and Colby</h2><p>Separate engagement benchmark · Snapshot September 10, 2026. The reporting selector above applies to marketing reports; this engagement snapshot has its own fixed window.</p></section><aside class="notice"><div><strong>Partial coverage · numeric results not publishable</strong><p>Event times and participant assessments still require review. These are embedded report examples, not a live collector connection.</p></div>${link('https://docs.google.com/document/d/124n4bxGXto5LFlKoPcD1w2bZSAKcDdlY1BYtkYmhQlo/edit','Canonical rubric')}</aside><section class="panel"><div class="section-head"><div><label for="profile">Profile</label><select id="profile"><option value="both">Both profiles</option><option value="nol">Nolan Browne</option><option value="colby">Colby Swanson</option></select></div><button id="export-engagement">Export JSON</button></div><div id="profiles"></div><h2 class="section">Evidence queue</h2><label for="evidence-search">Search observed evidence</label><input id="evidence-search" type="search" placeholder="Search profile or evidence"><div id="evidence"></div></section><section class="panel section"><h2>Rubric reference</h2><div class="rubric-buttons">${Object.keys(rubric).map(k=>`<button data-rubric="${k}" aria-pressed="${k==='relevance'}">${esc(k[0].toUpperCase()+k.slice(1))}</button>`).join('')}</div><div id="rubric-content"></div></section>`;}
+function refreshLinkedIn(){
+ const target=document.querySelector('#profile')?.value||'both';
+ const search=(document.querySelector('#evidence-search')?.value||'').toLowerCase();
+ document.querySelector('#profiles').innerHTML=dashboard.people.filter(p=>target==='both'||p.id===target).map(p=>`<article class="section"><h3>${esc(p.name)}</h3>${tag('Not publishable','warn')}<div class="pilot-grid">${dashboard.metrics.map(m=>`<div class="metric-row"><span>${esc(m.label)}<small>${esc(m.target)} · per-person pilot target</small></span><strong>—</strong></div>`).join('')}</div></article>`).join('');
+ const rows=dashboard.evidence.filter(e=>(target==='both'||e.target===target)&&[e.profile,e.excerpt,e.eventTime,e.review].join(' ').toLowerCase().includes(search));
+ document.querySelector('#evidence').innerHTML=rows.length?rows.map(e=>`<article class="priority"><div></div><div><h3>${esc(e.profile)}</h3><p>${esc(e.excerpt)}</p><p>${esc(e.eventTime)} · ${esc(e.review)} · ${esc(e.result)}</p>${link(e.url,'Profile activity feed')}<p class="fine">Exact post URL and verified event time are still required for scored evidence.</p></div></article>`).join(''):'<p>No evidence matches this filter.</p>';
 }
-
-function renderPeople() {
-  const visible = dashboard.people.filter(function (person) {
-    return selectedTarget === 'both' || person.id === selectedTarget;
-  });
-  document.querySelector('#peopleList').innerHTML = visible.map(function (person, index) {
-    return [
-      '<article class="person-row" style="animation-delay:' + index * 55 + 'ms">',
-      '<div class="person-identity"><div class="person-avatar" aria-hidden="true">' + person.initials + '</div>',
-      '<div><strong>' + person.name + '</strong><span>' + person.profile + '</span></div></div>',
-      '<div class="person-metric"><span>Qualified breadth</span><strong>' + valueLabel(person.breadth) + '</strong></div>',
-      '<div class="person-metric"><span>Weighted points</span><strong>' + valueLabel(person.points) + '</strong></div>',
-      '<div class="person-metric"><span>Deep conversations</span><strong>' + valueLabel(person.depth) + '</strong></div>',
-      '<div class="person-metric"><span>Stewardship</span><strong>' + valueLabel(person.stewardship) + '</strong></div>',
-      '<div><span class="status-chip status-chip--warning">' + person.status + '</span></div>',
-      '</article>'
-    ].join('');
-  }).join('');
-}
-
-function renderEvidence() {
-  const search = document.querySelector('#evidenceSearch').value.trim().toLowerCase();
-  const rows = dashboard.evidence.filter(function (item) {
-    const targetMatch = selectedTarget === 'both' || item.target === selectedTarget;
-    const searchMatch = [item.profile, item.excerpt, item.eventTime, item.review, item.result]
-      .join(' ')
-      .toLowerCase()
-      .includes(search);
-    return targetMatch && searchMatch;
-  });
-  document.querySelector('#evidenceRows').innerHTML = rows.map(function (item) {
-    return [
-      '<tr>',
-      '<td><strong>' + item.profile + '</strong></td>',
-      '<td><a class="evidence-link" href="' + item.url + '" target="_blank" rel="noreferrer">' + item.excerpt + '</a></td>',
-      '<td>' + item.eventTime + '</td>',
-      '<td><span class="status-chip status-chip--muted">' + item.review + '</span></td>',
-      '<td><span class="status-chip status-chip--warning">' + item.result + '</span></td>',
-      '</tr>'
-    ].join('');
-  }).join('');
-  document.querySelector('#emptyState').hidden = rows.length !== 0;
-}
-
-function renderRubric(key) {
-  const item = rubric[key];
-  const scale = item.items.map(function (entry) {
-    return [
-      '<div class="scale-item">',
-      '<span>' + entry[0] + '</span>',
-      '<strong>' + entry[1] + '</strong>',
-      '<p>' + entry[2] + '</p>',
-      '</div>'
-    ].join('');
-  }).join('');
-  document.querySelector('#rubricPanel').innerHTML =
-    '<h3>' + item.title + '</h3><p>' + item.copy + '</p><div class="rubric-scale">' + scale + '</div>';
-}
-
-function setTarget(target) {
-  selectedTarget = target;
-  document.querySelectorAll('.segment').forEach(function (button) {
-    button.classList.toggle('is-selected', button.dataset.target === target);
-  });
-  renderPeople();
-  renderEvidence();
-}
-
-document.querySelectorAll('.segment').forEach(function (button) {
-  button.addEventListener('click', function () { setTarget(button.dataset.target); });
-});
-
-document.querySelectorAll('.rubric-tab').forEach(function (button) {
-  button.addEventListener('click', function () {
-    document.querySelectorAll('.rubric-tab').forEach(function (tab) {
-      const selected = tab === button;
-      tab.classList.toggle('is-selected', selected);
-      tab.setAttribute('aria-selected', String(selected));
-    });
-    renderRubric(button.dataset.rubric);
-  });
-});
-
-document.querySelector('#evidenceSearch').addEventListener('input', renderEvidence);
-document.querySelector('#periodSelect').addEventListener('change', function (event) {
-  const metric = dashboard.metrics.find(function (item) { return item.key === 'persistence'; });
-  metric.target = event.target.value === '28' ? 'Target: 25%+' : 'Requires 28 days';
-  renderMetrics();
-});
-
-document.querySelector('#exportButton').addEventListener('click', function () {
-  const payload = Object.assign({}, dashboard, {
-    exportedAt: new Date().toISOString(),
-    selectedTarget: selectedTarget
-  });
-  const blob = new Blob([JSON.stringify(payload, null, 2)], { type: 'application/json' });
-  const url = URL.createObjectURL(blob);
-  const link = document.createElement('a');
-  link.href = url;
-  link.download = 'adl-linkedin-benchmark-snapshot.json';
-  link.click();
-  URL.revokeObjectURL(url);
-});
-
-const mobileMenu = document.querySelector('.mobile-menu');
-mobileMenu.addEventListener('click', function () {
-  const open = document.body.classList.toggle('nav-open');
-  mobileMenu.setAttribute('aria-expanded', String(open));
-});
-
-document.querySelectorAll('.nav-link').forEach(function (link) {
-  link.addEventListener('click', function () {
-    document.querySelectorAll('.nav-link').forEach(function (item) { item.classList.remove('is-active'); });
-    link.classList.add('is-active');
-    document.body.classList.remove('nav-open');
-    mobileMenu.setAttribute('aria-expanded', 'false');
-  });
-});
-
-renderMetrics();
-renderPeople();
-renderEvidence();
-renderRubric('relevance');
+function refreshRubric(key='relevance'){const r=rubric[key];document.querySelector('#rubric-content').innerHTML=`<h3 class="section">${esc(r.title)}</h3><p>${esc(r.copy)}</p><div class="pilot-grid">${r.items.map(x=>`<div class="metric-row"><div><strong>${esc(x[1])}</strong><small>${esc(x[2])}</small></div><span>${esc(x[0])}</span></div>`).join('')}</div>`;}
+function bindLinkedIn(){if(!document.querySelector('#profile'))return;refreshLinkedIn();refreshRubric();document.querySelector('#profile').onchange=refreshLinkedIn;document.querySelector('#evidence-search').oninput=refreshLinkedIn;document.querySelectorAll('[data-rubric]').forEach(b=>b.onclick=()=>{document.querySelectorAll('[data-rubric]').forEach(x=>x.setAttribute('aria-pressed',String(x===b)));refreshRubric(b.dataset.rubric)});document.querySelector('#export-engagement').onclick=()=>{const target=document.querySelector('#profile').value;const payload={...dashboard,exportedAt:new Date().toISOString(),selectedTarget:target,people:dashboard.people.filter(p=>target==='both'||p.id===target),evidence:dashboard.evidence.filter(e=>target==='both'||e.target===target)};const url=URL.createObjectURL(new Blob([JSON.stringify(payload,null,2)],{type:'application/json'}));const a=document.createElement('a');a.href=url;a.download='adl-linkedin-engagement.json';a.click();setTimeout(()=>URL.revokeObjectURL(url),1000);};}

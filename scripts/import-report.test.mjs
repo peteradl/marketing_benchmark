@@ -1,0 +1,11 @@
+import test from 'node:test';
+import assert from 'node:assert/strict';
+import {readFileSync} from 'node:fs';
+import {validateReport} from './import-report.mjs';
+const data=JSON.parse(readFileSync(new URL('../data/reports.json',import.meta.url)));
+test('source snapshots comply with report contract',()=>data.runs.forEach(validateReport));
+test('test runs cannot publish numerical results',()=>{const r=structuredClone(data.runs[0]);r.scores=[data.runs[1].scores[0]];assert.throws(()=>validateReport(r),/Test runs/)});
+test('missing scores cannot turn into zero',()=>{const r=structuredClone(data.runs[1]);r.scores[0].score=null;assert.throws(()=>validateReport(r),/Score must/)});
+test('historical scores cannot be relabeled current',()=>{const r=structuredClone(data.runs[1]);r.scores[0].date='2026-09-10';assert.throws(()=>validateReport(r),/Historical/)});
+test('unsafe source URLs are rejected',()=>{const r=structuredClone(data.runs[1]);r.sourceUrl='javascript:alert(1)';assert.throws(()=>validateReport(r),/source/)});
+test('duplicate artifact scores are rejected',()=>{const r=structuredClone(data.runs[1]);r.scores.push(r.scores[0]);assert.throws(()=>validateReport(r),/Duplicate/)});

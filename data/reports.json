@@ -1,0 +1,272 @@
+{
+  "schemaVersion": 1,
+  "importedAt": "2026-09-10",
+  "libraryUrl": "https://drive.google.com/drive/folders/1iHGgxucjVfF9U0_OLNYZzlDmtfiEi2bE",
+  "runs": [
+    {
+      "id": "2026-09-10",
+      "label": "Sep 5–10, 2026 · Test run",
+      "kind": "test",
+      "sourceUrl": "https://docs.google.com/document/d/1qXkAQq9SLmo6KbtMFj6D54_sgq709vohnc2lcKCskZA/edit",
+      "window": "September 5–10, 2026 · Six-day partial period",
+      "headline": "New scores on hold",
+      "summary": "Current public findings are available. Numeric scores were withheld because benchmark rules and analytics could not be refreshed.",
+      "hold": "No current score was issued. Earlier artifact scores are historical references, and the unequal reporting windows do not support a numeric week-over-week comparison.",
+      "scores": [],
+      "recommendations": [
+        {
+          "title": "Remove the retreat template from Owners & Developers",
+          "impact": "Critical",
+          "effort": "Low–medium",
+          "why": "The report found unrelated event, refund, registration, and itinerary content beneath the Industrialized Construction opening.",
+          "action": "Replace the leaked sections with the intended owner-system proof, process, and conversion path. Recheck the full page before promotion.",
+          "verify": "The next review should confirm that every section and call to action serves owners and developers.",
+          "surface": "Owners & Developers"
+        },
+        {
+          "title": "Restore source and analytics access",
+          "impact": "Critical",
+          "effort": "Medium",
+          "why": "The September 10 test could not refresh benchmark rules or access website and YouTube analytics.",
+          "action": "Verify the benchmark agent can read canonical Drive folders, inspect analytics freshness, and write its report to Official Benchmark Runs.",
+          "verify": "The next run records accessible sources, finalized observation windows, and benchmark versions before issuing supported scores.",
+          "surface": "Benchmark agent"
+        },
+        {
+          "title": "Align the persistent positioning",
+          "impact": "High",
+          "effort": "Medium",
+          "why": "The homepage and recent LinkedIn content express the IC systems proposition, while older pages and profiles retain broader legacy positioning.",
+          "action": "Clarify how Industrialized Construction relates to ADL’s venture, climate-tech, accelerator, and government work. Apply the resulting language across persistent profiles.",
+          "verify": "Reassess the same surfaces against Strategy Marketing Consistency v1.0.",
+          "surface": "Website & LinkedIn"
+        },
+        {
+          "title": "Reconcile proof points and office details",
+          "impact": "High",
+          "effort": "Low",
+          "why": "Portfolio and Accelerators cite $510M and $600M without clear definitions and dates; public office details appear inconsistent.",
+          "action": "Add source links, population definitions, and as-of dates to claims. Verify all locations against the authoritative listing.",
+          "verify": "Material claims have traceable evidence, and public office information agrees.",
+          "surface": "Portfolio, Accelerators & Contact"
+        },
+        {
+          "title": "Complete a copy and production pass",
+          "impact": "Medium",
+          "effort": "Low",
+          "why": "The report identified a missing preposition, an Industrialized Construction misspelling, and stale footer years.",
+          "action": "Correct the homepage sentence, ROAD to IC spelling, footer years, and unresolved placeholders on controlled program pages.",
+          "verify": "Recheck published pages and record the evidence of each correction.",
+          "surface": "Website"
+        },
+        {
+          "title": "Confirm the YouTube measurement path",
+          "impact": "Medium",
+          "effort": "Medium",
+          "why": "Official channel ownership and activity were unverified in the report.",
+          "action": "Record the official channel URL in the inventory and use the authorized YouTube dataset for activity and engagement.",
+          "verify": "A future report links the owned channel and cites dated analytics; search visibility alone does not establish inactivity.",
+          "surface": "YouTube"
+        }
+      ],
+      "coverage": "Partial review",
+      "coverageNote": "Inventory completeness was not verified in this test.",
+      "analytics": "On hold",
+      "analyticsNote": "Website and YouTube data unavailable to the report agent.",
+      "strategy": "Not rescored",
+      "brand": "Not rescored"
+    },
+    {
+      "id": "2026-09-04",
+      "label": "Aug 29–Sep 4, 2026 · Baseline",
+      "kind": "baseline",
+      "sourceUrl": "https://docs.google.com/document/d/1zjpZ2pD7orA8CAoY-Y7HghmhUSIrjoB4cSaZ2bhNgnc/edit",
+      "window": "August 29–September 4, 2026 · Seven-day period",
+      "headline": "Baseline established",
+      "summary": "The homepage and in-window LinkedIn content lead on strategy alignment. Persistent surfaces need a more coherent story.",
+      "hold": "Artifact scores are reported separately. The benchmarks do not authorize a blended marketing score; channel analytics were not scored.",
+      "scores": [
+        {
+          "name": "Corporate homepage",
+          "score": 94,
+          "rating": "Strongly consistent",
+          "url": "https://www.adlventures.com/",
+          "family": "Strategy alignment",
+          "date": "2026-09-04"
+        },
+        {
+          "name": "In-window LinkedIn series",
+          "score": 93,
+          "rating": "Strongly consistent",
+          "url": "https://www.linkedin.com/company/adlventures",
+          "family": "Strategy alignment",
+          "date": "2026-09-04"
+        },
+        {
+          "name": "Owners & Developers",
+          "score": 61,
+          "rating": "Needs revision",
+          "url": "https://www.adlventures.com/owners-developers",
+          "family": "Strategy alignment",
+          "date": "2026-09-04"
+        },
+        {
+          "name": "About Us",
+          "score": 48,
+          "rating": "Off strategy",
+          "url": "https://www.adlventures.com/about-us",
+          "family": "Strategy alignment",
+          "date": "2026-09-04"
+        },
+        {
+          "name": "Who We Serve",
+          "score": 53,
+          "rating": "Off strategy",
+          "url": "https://www.adlventures.com/industries-we-serve",
+          "family": "Strategy alignment",
+          "date": "2026-09-04"
+        },
+        {
+          "name": "Construction",
+          "score": 54,
+          "rating": "Off strategy + hold",
+          "url": "https://www.adlventures.com/construction",
+          "family": "Strategy alignment",
+          "date": "2026-09-04"
+        },
+        {
+          "name": "Portfolio",
+          "score": 65,
+          "rating": "Needs revision",
+          "url": "https://www.adlventures.com/portfolio",
+          "family": "Strategy alignment",
+          "date": "2026-09-04"
+        },
+        {
+          "name": "Accelerators",
+          "score": 56,
+          "rating": "Needs revision + hold",
+          "url": "https://www.adlventures.com/accelerators",
+          "family": "Strategy alignment",
+          "date": "2026-09-04"
+        },
+        {
+          "name": "ROAD to IC",
+          "score": 73,
+          "rating": "Consistent",
+          "url": "https://www.adlventures.com/road-to-ic",
+          "family": "Strategy alignment",
+          "date": "2026-09-04"
+        },
+        {
+          "name": "LinkedIn company profile",
+          "score": 54,
+          "rating": "Off strategy",
+          "url": "https://www.linkedin.com/company/adlventures",
+          "family": "Strategy alignment",
+          "date": "2026-09-04"
+        },
+        {
+          "name": "Built Environment showcase",
+          "score": 54,
+          "rating": "Off strategy + hold",
+          "url": "https://www.linkedin.com/showcase/adl-built-environment/",
+          "family": "Strategy alignment",
+          "date": "2026-09-04"
+        },
+        {
+          "name": "ProblemSpace",
+          "score": 75,
+          "rating": "Consistent",
+          "url": "https://problemspace.io/",
+          "family": "Strategy alignment",
+          "date": "2026-09-04"
+        },
+        {
+          "name": "Uptake Alliance",
+          "score": 64,
+          "rating": "Needs revision",
+          "url": "https://www.uptakealliance.com/",
+          "family": "Strategy alignment",
+          "date": "2026-09-04"
+        },
+        {
+          "name": "Build NC",
+          "score": 79,
+          "rating": "Consistent + hold",
+          "url": "https://www.buildnc.io/about",
+          "family": "Strategy alignment",
+          "date": "2026-09-04"
+        },
+        {
+          "name": "ABC Collaborative",
+          "score": 88,
+          "rating": "Strongly consistent",
+          "url": "https://advancedbuildingconstruction.org/",
+          "family": "Strategy alignment",
+          "date": "2026-09-04"
+        },
+        {
+          "name": "SAME IHS listing",
+          "score": 79,
+          "rating": "Consistent",
+          "url": "https://www.same.org/event/2026-texas-industrialized-housing-summit/",
+          "family": "Strategy alignment",
+          "date": "2026-09-04"
+        },
+        {
+          "name": "2025 slide template",
+          "score": 69,
+          "rating": "Revision recommended",
+          "url": "https://docs.google.com/presentation/d/13l8s_NfOKPm3t7noxqTlJtE3cHRQfp2Xf8LhZVx8BP8/edit",
+          "family": "Brand consistency",
+          "date": "2026-09-04"
+        }
+      ],
+      "recommendations": [
+        {
+          "title": "Remove the retreat template from Owners & Developers",
+          "impact": "Critical",
+          "effort": "Low–medium",
+          "why": "The report found unrelated event, refund, registration, and itinerary content beneath the Industrialized Construction opening.",
+          "action": "Replace the leaked sections with the intended owner-system proof, process, and conversion path. Recheck the full page before promotion.",
+          "verify": "The next review should confirm that every section and call to action serves owners and developers.",
+          "surface": "Owners & Developers"
+        },
+        {
+          "title": "Align the persistent positioning",
+          "impact": "High",
+          "effort": "Medium",
+          "why": "The homepage and recent LinkedIn content express the IC systems proposition, while older pages and profiles retain broader legacy positioning.",
+          "action": "Clarify how Industrialized Construction relates to ADL’s venture, climate-tech, accelerator, and government work. Apply the resulting language across persistent profiles.",
+          "verify": "Reassess the same surfaces against Strategy Marketing Consistency v1.0.",
+          "surface": "Website & LinkedIn"
+        },
+        {
+          "title": "Substantiate material quantitative claims",
+          "impact": "High",
+          "effort": "Medium",
+          "why": "Construction, Accelerators, Build NC, Built Environment, and template content include unsupported material claims.",
+          "action": "Source or remove quantitative claims and resolve evidence holds before publication.",
+          "verify": "Each material claim links to supporting evidence.",
+          "surface": "Website, partner surfaces & slides"
+        },
+        {
+          "title": "Add dated weekly analytics evidence",
+          "impact": "High",
+          "effort": "Medium",
+          "why": "No compatible performance dataset was available in the source folder.",
+          "action": "Provide platform, artifact URL, publish time, impressions, engagements, clicks, conversions, and a compatible baseline.",
+          "verify": "The next report can evaluate channel performance with a defined benchmark.",
+          "surface": "Analytics"
+        }
+      ],
+      "coverage": "37 / 41 destinations",
+      "coverageNote": "Reviewable evidence; four linked destinations had limited access.",
+      "analytics": "Not scored",
+      "analyticsNote": "No compatible analytics evidence in the source folder.",
+      "strategy": "Artifact scores",
+      "brand": "69 / 100"
+    }
+  ]
+}
