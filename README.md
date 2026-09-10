@@ -21,3 +21,7 @@ Canonical benchmark: https://docs.google.com/document/d/124n4bxGXto5LFlKoPcD1w2b
 ## Current overall benchmark
 
 [Overall Marketing Benchmark v0.2](benchmarks/overall-marketing-v0.2.md) defines four separate assessments: message and brand quality, audience attention, relevant relationships, and action/conversion. It supersedes the v0.1 composite proposal. The dashboard UI and agent pipeline still need migration to this contract. Drive synchronization is pending connector recovery; do not assume the agents’ Drive copy has updated.
+
+## Latest benchmark test
+
+The default Latest benchmark view displays the [September 10 v0.2 test](reports/benchmark-test-2026-09-10.md), including native channel metrics, explicit holds, and three proposed actions. Historical snapshots and their original IDs are preserved. Raw connector payloads remain in local deliverables rather than the public website. Drive synchronization is still pending.
