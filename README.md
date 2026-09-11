@@ -19,3 +19,9 @@ Run npm start for a local preview, npm test for checks, and npm run validate for
 ## Workspace-agent execution
 
 The benchmark must run from workspace-accessible files and source connectors, without Chrome or interactive browser automation. If a connector does not return required creative or evidence, record No score. Earlier manual visual observations are supplemental audit notes, not a required scoring input or an automated brand assessment.
+
+Every known persistent surface and category appears as a visible card, including entries without verified accounts, artifacts, registration or scores. Surface placeholders preserve distinct categories that share a reference URL; they do not create duplicate scored artifacts or add points.
+
+## Latest Chrome-assisted diagnostic run
+
+[Browser run](reports/benchmark-browser-run-2026-09-10.md): 349.04 provisional points, including 60.4 assessed-item quality and 288.64 carried-forward analytics points. Five items have both scores; this is not full weekly coverage. All 69 known surface entries are visible, including unregistered discoveries. User authorized Chrome for this run; the unattended-agent workflow still requires equivalent connector evidence.

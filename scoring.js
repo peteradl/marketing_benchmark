@@ -5,6 +5,6 @@ export function calculate(run) {
  const quality=scored.length?scored.reduce((n,i)=>n+(i.strategy+i.brand)/2,0)/scored.length:null;
  const analytics=run.kpis.map(k=>({...k,points:Number.isFinite(k.value)&&k.value>=0?k.value*k.multiplier:null}));
  const observed=analytics.reduce((s,k)=>s+(k.points??0),0);
- const complete=run.inventoryComplete&&items.length>0&&scored.length===items.length&&analytics.every(k=>k.complete&&k.points!==null);
+ const complete=run.inventoryComplete&&!items.some(i=>i.publicationHold||i.assessmentStatus==='diagnostic')&&items.length>0&&scored.length===items.length&&analytics.every(k=>k.complete&&k.points!==null);
  return {quality,scored:scored.length,expected:items.length,analytics,total:(quality??0)+observed,complete};
 }

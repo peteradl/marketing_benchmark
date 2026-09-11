@@ -33,3 +33,7 @@ The four user-supplied files in this folder now provide the strategy rubric, bra
 ## Layout and agent execution clarification
 
 Per the user’s supplied sketch: separate surface scores and weekly-content scores, display an average for each, then analytics, two AI recommendations and the total. Cards open brand, strategy and recommendations. Missing results say No score. Section averages summarize their scored items; they are not added together or counted twice in the total. Agents must use workspace-accessible files and connectors, not interactive Chrome. Missing creative or other evidence remains unscored. Supplemental manual browser observations from the initial audit are not agent-run inputs.
+
+## Diagnostic browser run
+
+The user authorized Chrome for the September 10 follow-up. This is explicitly a diagnostic run rather than an unattended-agent run. Diagnostic numeric scores may measure observed defects, including items on publication hold; they contribute to the clearly provisional assessed-item average but never clear a hold or establish a complete result. Every known surface/category is displayed, including unregistered entries.
