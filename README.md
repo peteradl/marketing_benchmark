@@ -1,27 +1,21 @@
 # ADL marketing dashboard
 
-One dashboard on `main`: weekly marketing overview, AI recommendations, LinkedIn IC engagement, and the cybernetic feedback loop.
+One dashboard on main, with a reporting window, clickable surface and weekly-content cards, strategy and branding assessments, recommendations, KPI points and an uncapped total. There are no navigation tabs.
+
+## Current run
+
+[September 3–9 run](reports/benchmark-run-2026-09-10-v0.3.md): seven provisional strategy worksheets, **288.64 observed analytics points**, incomplete branding and key-person coverage. This is not a complete weekly total. Persistent pages were reviewed September 10, not historically reconstructed.
+
+The four user-supplied reference files are preserved in benchmarks/. [Scoring methodology](benchmarks/overall-marketing-v0.3.md) defines the aggregation. The supplied surface inventory is retained with review gaps visible. No rubric weights have been tuned yet. Drive has not been synchronized by this update.
 
 ## Vercel
 
-Deploy the `main` branch. Framework: Other. Root directory: repository root. Build command: empty. Output directory: `.`. No runtime dependencies or separate Sites deployment is required.
-
-## Data
-
-Marketing snapshots live in `data/reports.json`; engagement snapshot and rubric reference live in `linkedin.js`. Historical scores retain their original dates. September 10 marketing scores and LinkedIn pilot metrics remain withheld. The engagement view explicitly identifies its fixed observation window independently of marketing report selection.
-
-These are sourced snapshots, not a live agent connection. Publication holds are represented in the supplied data; the UI does not independently evaluate raw evidence or calculate engagement scores. No recommendation is marked completed without evidence.
+Deploy main using Other, repository root, no build command, output directory `.`. The dashboard reads data/points-runs.json; it is a published snapshot, not a live connector integration.
 
 ## Development
 
-`npm start` serves the repository on port 4173. `npm test` validates report safeguards. `npm run validate` checks marketing snapshots. Add a new report using `npm run import-report -- /path/to/report.json`, then review and push to main to deploy it. Existing dates cannot be overwritten by the importer. Automatic delivery from the benchmark agent still needs integration.
+Run npm start for a local preview, npm test for checks, and npm run validate for historical snapshot validation. Historical reports and the older importer remain available, but the v0.3 dashboard uses data/points-runs.json. Update that file to publish a new v0.3 run. Older scores use different methods and must not be compared directly.
 
-Canonical benchmark: https://docs.google.com/document/d/124n4bxGXto5LFlKoPcD1w2bZSAKcDdlY1BYtkYmhQlo/edit
+## Workspace-agent execution
 
-## Current overall benchmark
-
-[Overall Marketing Benchmark v0.2](benchmarks/overall-marketing-v0.2.md) defines four separate assessments: message and brand quality, audience attention, relevant relationships, and action/conversion. It supersedes the v0.1 composite proposal. The dashboard UI and agent pipeline still need migration to this contract. Drive synchronization is pending connector recovery; do not assume the agents’ Drive copy has updated.
-
-## Latest benchmark test
-
-The default Latest benchmark view displays the [September 10 v0.2 test](reports/benchmark-test-2026-09-10.md), including native channel metrics, explicit holds, and three proposed actions. Historical snapshots and their original IDs are preserved. Raw connector payloads remain in local deliverables rather than the public website. Drive synchronization is still pending.
+The benchmark must run from workspace-accessible files and source connectors, without Chrome or interactive browser automation. If a connector does not return required creative or evidence, record No score. Earlier manual visual observations are supplemental audit notes, not a required scoring input or an automated brand assessment.

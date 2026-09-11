@@ -1,0 +1,919 @@
+{
+  "schemaVersion": 1,
+  "runs": [
+    {
+      "id": "2026-09-03_2026-09-09-v0.3",
+      "label": "Sep 3\u20139, 2026 \u00b7 provisional",
+      "methodVersion": "0.3",
+      "inventoryComplete": false,
+      "surfaces": [
+        {
+          "name": "ADL website",
+          "type": "Owned website",
+          "coverage": "Five persistent pages received provisional strategy worksheets. Desktop homepage and desktop/mobile contact visuals sampled. Additional registered pages and complete branding checks remain outstanding.",
+          "items": [
+            {
+              "name": "Homepage",
+              "url": "https://www.adlventures.com/",
+              "strategy": 83,
+              "brand": null,
+              "status": "Provisional strategy score from visible text. Branding assessment incomplete; this is not publication approval.",
+              "recommendation": "Preserve the clear IC systems position and connect audience-specific promises to matching inquiry guidance.",
+              "strategyDimensions": [
+                {
+                  "dimension": "Industry purpose",
+                  "weight": 20,
+                  "level": 1,
+                  "points": 20,
+                  "evidence": "Explicit Industrialized Construction positioning."
+                },
+                {
+                  "dimension": "System-design identity",
+                  "weight": 25,
+                  "level": 1,
+                  "points": 25,
+                  "evidence": "Coordinates owners, AEC and investors around an industry system."
+                },
+                {
+                  "dimension": "Strategic engine alignment",
+                  "weight": 15,
+                  "level": 0.75,
+                  "points": 11.25,
+                  "evidence": "Audience pathways are visible; engine relationships need clearer explanation."
+                },
+                {
+                  "dimension": "Flywheel / ecosystem value",
+                  "weight": 15,
+                  "level": 0.75,
+                  "points": 11.25,
+                  "evidence": "Cross-actor benefits are visible; feedback between ventures and ecosystem is less explicit."
+                },
+                {
+                  "dimension": "Evidence / role clarity",
+                  "weight": 15,
+                  "level": 0.5,
+                  "points": 7.5,
+                  "evidence": "Client/partner logo grouping does not establish each specific role."
+                },
+                {
+                  "dimension": "Audience relevance / action",
+                  "weight": 10,
+                  "level": 0.75,
+                  "points": 7.5,
+                  "evidence": "Audience-specific promises; inquiry destination remains generic."
+                }
+              ],
+              "evidenceScope": "Public text reviewed September 10, 2026; new LinkedIn post text supplied by the analytics connector. Creative and linked-destination verification are incomplete where noted.",
+              "brandFindings": [
+                "Acumin Pro headings differ from Libre Franklin.",
+                "Audience paragraphs use justified alignment, contrary to the guide.",
+                "Relevant construction imagery and a consistent teal accent are visible.",
+                "Complete mobile, contrast, focus and approved-asset checks remain outstanding."
+              ],
+              "kind": "persistent-surface"
+            },
+            {
+              "name": "Contact / inquiry",
+              "url": "https://www.adlventures.com/contact-adl",
+              "strategy": 46,
+              "brand": null,
+              "status": "Provisional strategy score from visible text. Branding assessment incomplete; this is not publication approval.",
+              "recommendation": "Align the general inquiry copy with owners, AEC firms and investors; validate successful submission tracking.",
+              "strategyDimensions": [
+                {
+                  "dimension": "Industry purpose",
+                  "weight": 20,
+                  "level": 0,
+                  "points": 0,
+                  "evidence": "No IC purpose in the inquiry copy."
+                },
+                {
+                  "dimension": "System-design identity",
+                  "weight": 25,
+                  "level": 0.5,
+                  "points": 12.5,
+                  "evidence": "General inquiry page is neutral on system design."
+                },
+                {
+                  "dimension": "Strategic engine alignment",
+                  "weight": 15,
+                  "level": 0.5,
+                  "points": 7.5,
+                  "evidence": "Accelerator inquiry is mentioned without engine context."
+                },
+                {
+                  "dimension": "Flywheel / ecosystem value",
+                  "weight": 15,
+                  "level": 0.5,
+                  "points": 7.5,
+                  "evidence": "Invites collaboration without describing ecosystem effects."
+                },
+                {
+                  "dimension": "Evidence / role clarity",
+                  "weight": 15,
+                  "level": 0.75,
+                  "points": 11.25,
+                  "evidence": "Simple contact invitation avoids material outcome claims."
+                },
+                {
+                  "dimension": "Audience relevance / action",
+                  "weight": 10,
+                  "level": 0.75,
+                  "points": 7.5,
+                  "evidence": "Labeled form supports inquiries; audience routing is generic."
+                }
+              ],
+              "evidenceScope": "Public text reviewed September 10, 2026; new LinkedIn post text supplied by the analytics connector. Creative and linked-destination verification are incomplete where noted.",
+              "brandFindings": [
+                "Acumin Pro headings and Poppins body differ from the supplied guide.",
+                "At 390px viewport, body text measured approximately 14.99px, below the guide\u2019s 16px target.",
+                "Mobile content fits without horizontal overflow; the loaded form has named required fields.",
+                "Keyboard/focus, full contrast review and approved asset verification remain incomplete."
+              ],
+              "kind": "persistent-surface"
+            },
+            {
+              "name": "About Us",
+              "url": "https://www.adlventures.com/about-us",
+              "strategy": 50,
+              "brand": null,
+              "recommendation": "Reframe the opening around the current IC mission and explain the role of the older climate work.",
+              "strategyDimensions": [
+                {
+                  "dimension": "Industry purpose",
+                  "weight": 20,
+                  "level": 0,
+                  "points": 0,
+                  "evidence": "Broad climate / innovation purpose rather than IC."
+                },
+                {
+                  "dimension": "System-design identity",
+                  "weight": 25,
+                  "level": 0.5,
+                  "points": 12.5,
+                  "evidence": "Fractional-team positioning emphasizes services."
+                },
+                {
+                  "dimension": "Strategic engine alignment",
+                  "weight": 15,
+                  "level": 0.75,
+                  "points": 11.25,
+                  "evidence": "Venture creation and accelerators provide engine signals."
+                },
+                {
+                  "dimension": "Flywheel / ecosystem value",
+                  "weight": 15,
+                  "level": 0.75,
+                  "points": 11.25,
+                  "evidence": "Startups and incumbents are connected."
+                },
+                {
+                  "dimension": "Evidence / role clarity",
+                  "weight": 15,
+                  "level": 0.5,
+                  "points": 7.5,
+                  "evidence": "Role and outcome substantiation needs a clearer evidence chain."
+                },
+                {
+                  "dimension": "Audience relevance / action",
+                  "weight": 10,
+                  "level": 0.75,
+                  "points": 7.5,
+                  "evidence": "Audience and contact direction are present."
+                }
+              ],
+              "status": "Provisional strategy score from visible text. Branding assessment incomplete; this is not publication approval.",
+              "evidenceScope": "Public text reviewed September 10, 2026; new LinkedIn post text supplied by the analytics connector. Creative and linked-destination verification are incomplete where noted.",
+              "kind": "persistent-surface"
+            },
+            {
+              "name": "Owners & Developers",
+              "url": "https://www.adlventures.com/owners-developers",
+              "strategy": 58,
+              "brand": null,
+              "recommendation": "Remove the retreat/refund template text and replace it with a clear owner engagement path.",
+              "strategyDimensions": [
+                {
+                  "dimension": "Industry purpose",
+                  "weight": 20,
+                  "level": 1,
+                  "points": 20,
+                  "evidence": "IC opening is directly aligned."
+                },
+                {
+                  "dimension": "System-design identity",
+                  "weight": 25,
+                  "level": 0.75,
+                  "points": 18.75,
+                  "evidence": "Owner needs are related to construction-system change."
+                },
+                {
+                  "dimension": "Strategic engine alignment",
+                  "weight": 15,
+                  "level": 0.75,
+                  "points": 11.25,
+                  "evidence": "Demand-side participation is visible."
+                },
+                {
+                  "dimension": "Flywheel / ecosystem value",
+                  "weight": 15,
+                  "level": 0.5,
+                  "points": 7.5,
+                  "evidence": "Limited explanation of the broader ecosystem loop."
+                },
+                {
+                  "dimension": "Evidence / role clarity",
+                  "weight": 15,
+                  "level": 0,
+                  "points": 0,
+                  "evidence": "Retreat/refund and welcome-packet copy is unrelated to the stated offering."
+                },
+                {
+                  "dimension": "Audience relevance / action",
+                  "weight": 10,
+                  "level": 0,
+                  "points": 0,
+                  "evidence": "Unrelated retreat instructions interrupt the owner journey."
+                }
+              ],
+              "status": "Provisional strategy score from visible text. Branding assessment incomplete; this is not publication approval.",
+              "evidenceScope": "Public text reviewed September 10, 2026; new LinkedIn post text supplied by the analytics connector. Creative and linked-destination verification are incomplete where noted.",
+              "publicationHold": "Unrelated retreat/refund template content requires correction and factual review; diagnostic strategy score only.",
+              "kind": "persistent-surface"
+            },
+            {
+              "name": "ROAD to IC",
+              "url": "https://www.adlventures.com/road-to-ic",
+              "strategy": 86,
+              "brand": null,
+              "recommendation": "Support the leadership/history claim, correct the IC spelling and sharpen the participation CTA.",
+              "strategyDimensions": [
+                {
+                  "dimension": "Industry purpose",
+                  "weight": 20,
+                  "level": 1,
+                  "points": 20,
+                  "evidence": "IC purpose is explicit."
+                },
+                {
+                  "dimension": "System-design identity",
+                  "weight": 25,
+                  "level": 1,
+                  "points": 25,
+                  "evidence": "Industry, community, government and finance are coordinated."
+                },
+                {
+                  "dimension": "Strategic engine alignment",
+                  "weight": 15,
+                  "level": 0.75,
+                  "points": 11.25,
+                  "evidence": "Convening supports the engine; venture linkage can be more explicit."
+                },
+                {
+                  "dimension": "Flywheel / ecosystem value",
+                  "weight": 15,
+                  "level": 1,
+                  "points": 15,
+                  "evidence": "Multiple ecosystem actors are connected around adoption."
+                },
+                {
+                  "dimension": "Evidence / role clarity",
+                  "weight": 15,
+                  "level": 0.5,
+                  "points": 7.5,
+                  "evidence": "Leadership/history claims need visible support."
+                },
+                {
+                  "dimension": "Audience relevance / action",
+                  "weight": 10,
+                  "level": 0.75,
+                  "points": 7.5,
+                  "evidence": "Audience is defined; make the next participation step precise."
+                }
+              ],
+              "status": "Provisional strategy score from visible text. Branding assessment incomplete; this is not publication approval.",
+              "evidenceScope": "Public text reviewed September 10, 2026; new LinkedIn post text supplied by the analytics connector. Creative and linked-destination verification are incomplete where noted.",
+              "publicationHold": "Leadership/history claim needs supporting evidence before publication approval; diagnostic strategy score only.",
+              "kind": "persistent-surface"
+            }
+          ]
+        },
+        {
+          "name": "IC Summit",
+          "type": "Owned website",
+          "coverage": "Homepage reviewed; complete page inventory and external completion paths not verified.",
+          "items": [
+            {
+              "name": "IC Summit homepage",
+              "url": "https://www.icsummit.org/",
+              "strategy": null,
+              "brand": null,
+              "status": "Supplied rubrics available. Complete visual and content evidence is still required for numerical assessment.",
+              "recommendation": "Track the actual Substack and survey destinations; do not treat outbound clicks as completed actions.",
+              "kind": "persistent-surface"
+            }
+          ]
+        },
+        {
+          "name": "Company LinkedIn",
+          "type": "Company channel",
+          "coverage": "Two new posts returned for September 3\u20139. Publishing inventory and visual evidence not independently reconciled.",
+          "items": [
+            {
+              "name": "Company profile",
+              "url": "https://www.linkedin.com/company/adlventures/",
+              "strategy": null,
+              "brand": null,
+              "status": "Persistent profile review pending.",
+              "recommendation": "Review persistent profile positioning and visual identity against canonical rubrics.",
+              "kind": "persistent-surface"
+            },
+            {
+              "name": "September 4 \u00b7 Supply-side systems",
+              "url": "https://www.linkedin.com/feed/update/urn:li:share:7501486275418517505/",
+              "strategy": 86,
+              "brand": null,
+              "status": "Provisional strategy score from visible text. Branding assessment incomplete; this is not publication approval.",
+              "recommendation": "Verify the promised comment links and relevant discussion follow-through.",
+              "sourceId": "urn:li:share:7501486275418517505",
+              "strategyDimensions": [
+                {
+                  "dimension": "Industry purpose",
+                  "weight": 20,
+                  "level": 1,
+                  "points": 20,
+                  "evidence": "Industrialized construction production constraints are central."
+                },
+                {
+                  "dimension": "System-design identity",
+                  "weight": 25,
+                  "level": 1,
+                  "points": 25,
+                  "evidence": "Factory performance is explained through the surrounding system."
+                },
+                {
+                  "dimension": "Strategic engine alignment",
+                  "weight": 15,
+                  "level": 0.75,
+                  "points": 11.25,
+                  "evidence": "Production and innovation connect; specific engine roles are less explicit."
+                },
+                {
+                  "dimension": "Flywheel / ecosystem value",
+                  "weight": 15,
+                  "level": 0.75,
+                  "points": 11.25,
+                  "evidence": "Invites industry and government contributions."
+                },
+                {
+                  "dimension": "Evidence / role clarity",
+                  "weight": 15,
+                  "level": 0.75,
+                  "points": 11.25,
+                  "evidence": "Named contributors and specific bottlenecks; promised comment links unverified."
+                },
+                {
+                  "dimension": "Audience relevance / action",
+                  "weight": 10,
+                  "level": 0.75,
+                  "points": 7.5,
+                  "evidence": "Relevant stakeholder invitation, with follow-through to verify."
+                }
+              ],
+              "evidenceScope": "Public text reviewed September 10, 2026; new LinkedIn post text supplied by the analytics connector. Creative and linked-destination verification are incomplete where noted.",
+              "kind": "weekly-content"
+            },
+            {
+              "name": "September 7 \u00b7 Labor Day",
+              "url": "https://www.linkedin.com/feed/update/urn:li:share:7502716296183287808/",
+              "strategy": 54,
+              "brand": null,
+              "status": "Provisional strategy score from visible text. Branding assessment incomplete; this is not publication approval.",
+              "recommendation": "Retain the community context; judge this post against its purpose, not account-level traffic.",
+              "sourceId": "urn:li:share:7502716296183287808",
+              "strategyDimensions": [
+                {
+                  "dimension": "Industry purpose",
+                  "weight": 20,
+                  "level": 0.5,
+                  "points": 10.0,
+                  "evidence": "Worker appreciation is adjacent, not explicitly IC-focused."
+                },
+                {
+                  "dimension": "System-design identity",
+                  "weight": 25,
+                  "level": 0.5,
+                  "points": 12.5,
+                  "evidence": "Neutral recognition rather than a system-design argument."
+                },
+                {
+                  "dimension": "Strategic engine alignment",
+                  "weight": 15,
+                  "level": 0.5,
+                  "points": 7.5,
+                  "evidence": "No explicit engine connection; neutral holiday purpose."
+                },
+                {
+                  "dimension": "Flywheel / ecosystem value",
+                  "weight": 15,
+                  "level": 0.5,
+                  "points": 7.5,
+                  "evidence": "Community appreciation without a specific ecosystem mechanism."
+                },
+                {
+                  "dimension": "Evidence / role clarity",
+                  "weight": 15,
+                  "level": 0.75,
+                  "points": 11.25,
+                  "evidence": "Straightforward recognition avoids material performance claims."
+                },
+                {
+                  "dimension": "Audience relevance / action",
+                  "weight": 10,
+                  "level": 0.5,
+                  "points": 5.0,
+                  "evidence": "Appropriate holiday audience; no substantive participation action."
+                }
+              ],
+              "evidenceScope": "Public text reviewed September 10, 2026; new LinkedIn post text supplied by the analytics connector. Creative and linked-destination verification are incomplete where noted.",
+              "kind": "weekly-content"
+            }
+          ]
+        },
+        {
+          "name": "YouTube",
+          "type": "Video channel",
+          "coverage": "17 metadata records available, seeded from analytics. No new September 3\u20139 uploads appear in that subset; this does not establish a complete upload inventory. Video content and thumbnail visuals are unreviewed.",
+          "items": [
+            {
+              "name": "ADL YouTube channel",
+              "url": "https://www.youtube.com/channel/UCkjiQp9jDVu5eXAAx3FM-Mg",
+              "strategy": null,
+              "brand": null,
+              "status": "Channel and full content review pending; metadata-only review cannot establish video quality.",
+              "recommendation": "Reconcile the full upload inventory, then assess each new video and thumbnail against the two rubrics.",
+              "kind": "persistent-surface"
+            }
+          ]
+        },
+        {
+          "name": "Nolan Browne",
+          "type": "Individual LinkedIn",
+          "coverage": "VM2 captures are partial. Verified weekly post/comment inventory, dates and participant review are missing.",
+          "items": [
+            {
+              "name": "Nolan Browne \u00b7 profile and weekly content",
+              "url": "https://www.linkedin.com/in/nolbro/",
+              "strategy": null,
+              "brand": null,
+              "status": "Inventory placeholder, not a scored content item. No verified weekly assessment.",
+              "recommendation": "Resolve event dates and coverage; assess each produced item separately after the inventory is complete.",
+              "kind": "persistent-surface"
+            }
+          ]
+        },
+        {
+          "name": "Colby Swanson",
+          "type": "Individual LinkedIn",
+          "coverage": "VM2 captures are partial. Verified weekly post/comment inventory, dates and participant review are missing.",
+          "items": [
+            {
+              "name": "Colby Swanson \u00b7 profile and weekly content",
+              "url": "https://www.linkedin.com/in/colbyswanson/",
+              "strategy": null,
+              "brand": null,
+              "status": "Inventory placeholder, not a scored content item. No verified weekly assessment.",
+              "recommendation": "Resolve event dates and coverage; assess each produced item separately after the inventory is complete.",
+              "kind": "persistent-surface"
+            }
+          ]
+        },
+        {
+          "name": "Additional registered surfaces",
+          "type": "Inventory coverage",
+          "coverage": "Supplied register retained, with repeated URLs deduplicated. Shared programs, third-party pages and internal artifacts need applicability decisions and evidence. These are review placeholders, not verified weekly publications.",
+          "items": [
+            {
+              "name": "Who We Serve",
+              "url": "https://www.adlventures.com/industries-we-serve",
+              "strategy": null,
+              "brand": null,
+              "status": "Registered surface; full review pending. Historical inventory verification is not a current audit.",
+              "recommendation": "Confirm current ownership and applicability, collect the artifact and weekly publications, then apply both rubrics.",
+              "kind": "persistent-surface"
+            },
+            {
+              "name": "Construction",
+              "url": "https://www.adlventures.com/construction",
+              "strategy": null,
+              "brand": null,
+              "status": "Registered surface; full review pending. Historical inventory verification is not a current audit.",
+              "recommendation": "Confirm current ownership and applicability, collect the artifact and weekly publications, then apply both rubrics.",
+              "kind": "persistent-surface"
+            },
+            {
+              "name": "Energy & Utilities",
+              "url": "https://www.adlventures.com/energy",
+              "strategy": null,
+              "brand": null,
+              "status": "Registered surface; full review pending. Historical inventory verification is not a current audit.",
+              "recommendation": "Confirm current ownership and applicability, collect the artifact and weekly publications, then apply both rubrics.",
+              "kind": "persistent-surface"
+            },
+            {
+              "name": "Transportation",
+              "url": "https://www.adlventures.com/transportation",
+              "strategy": null,
+              "brand": null,
+              "status": "Registered surface; full review pending. Historical inventory verification is not a current audit.",
+              "recommendation": "Confirm current ownership and applicability, collect the artifact and weekly publications, then apply both rubrics.",
+              "kind": "persistent-surface"
+            },
+            {
+              "name": "Portfolio",
+              "url": "https://www.adlventures.com/portfolio",
+              "strategy": null,
+              "brand": null,
+              "status": "Registered surface; full review pending. Historical inventory verification is not a current audit.",
+              "recommendation": "Confirm current ownership and applicability, collect the artifact and weekly publications, then apply both rubrics.",
+              "kind": "persistent-surface"
+            },
+            {
+              "name": "Accelerators",
+              "url": "https://www.adlventures.com/accelerators",
+              "strategy": null,
+              "brand": null,
+              "status": "Registered surface; full review pending. Historical inventory verification is not a current audit.",
+              "recommendation": "Confirm current ownership and applicability, collect the artifact and weekly publications, then apply both rubrics.",
+              "kind": "persistent-surface"
+            },
+            {
+              "name": "Blog / Insights",
+              "url": "https://www.adlventures.com/blogs",
+              "strategy": null,
+              "brand": null,
+              "status": "Registered surface; full review pending. Historical inventory verification is not a current audit.",
+              "recommendation": "Confirm current ownership and applicability, collect the artifact and weekly publications, then apply both rubrics.",
+              "kind": "persistent-surface"
+            },
+            {
+              "name": "Case Studies",
+              "url": "https://www.adlventures.com/case-studies",
+              "strategy": null,
+              "brand": null,
+              "status": "Registered surface; full review pending. Historical inventory verification is not a current audit.",
+              "recommendation": "Confirm current ownership and applicability, collect the artifact and weekly publications, then apply both rubrics.",
+              "kind": "persistent-surface"
+            },
+            {
+              "name": "Join Our Team",
+              "url": "https://www.adlventures.com/joinourteam",
+              "strategy": null,
+              "brand": null,
+              "status": "Registered surface; full review pending. Historical inventory verification is not a current audit.",
+              "recommendation": "Confirm current ownership and applicability, collect the artifact and weekly publications, then apply both rubrics.",
+              "kind": "persistent-surface"
+            },
+            {
+              "name": "Internship Program",
+              "url": "https://www.adlventures.com/internships",
+              "strategy": null,
+              "brand": null,
+              "status": "Registered surface; full review pending. Historical inventory verification is not a current audit.",
+              "recommendation": "Confirm current ownership and applicability, collect the artifact and weekly publications, then apply both rubrics.",
+              "kind": "persistent-surface"
+            },
+            {
+              "name": "Downloadable IC overview",
+              "url": "https://static1.squarespace.com/static/642db4c92b5e9d447f22196d/t/68bed0d8ec3304278a89c5f6/1757335768523/Industrialized%2BConstruction%2BOverview_ADL.pdf",
+              "strategy": null,
+              "brand": null,
+              "status": "Registered surface; full review pending. Historical inventory verification is not a current audit.",
+              "recommendation": "Confirm current ownership and applicability, collect the artifact and weekly publications, then apply both rubrics.",
+              "kind": "persistent-surface"
+            },
+            {
+              "name": "ADL Built Environment LinkedIn showcase",
+              "url": "https://www.linkedin.com/showcase/adl-built-environment/",
+              "strategy": null,
+              "brand": null,
+              "status": "Registered surface; full review pending. Historical inventory verification is not a current audit.",
+              "recommendation": "Confirm current ownership and applicability, collect the artifact and weekly publications, then apply both rubrics.",
+              "kind": "persistent-surface"
+            },
+            {
+              "name": "Employee and executive LinkedIn profiles",
+              "url": "https://www.linkedin.com/company/adlventures/people/",
+              "strategy": null,
+              "brand": null,
+              "status": "Registered surface; full review pending. Historical inventory verification is not a current audit.",
+              "recommendation": "Confirm current ownership and applicability, collect the artifact and weekly publications, then apply both rubrics.",
+              "kind": "persistent-surface"
+            },
+            {
+              "name": "ETHIC Substack",
+              "url": "https://ethic2025.substack.com/",
+              "strategy": null,
+              "brand": null,
+              "status": "Registered surface; full review pending. Historical inventory verification is not a current audit.",
+              "recommendation": "Confirm current ownership and applicability, collect the artifact and weekly publications, then apply both rubrics.",
+              "kind": "persistent-surface"
+            },
+            {
+              "name": "Uptake newsletter",
+              "url": "https://www.uptakealliance.com/",
+              "strategy": null,
+              "brand": null,
+              "status": "Registered surface; full review pending. Historical inventory verification is not a current audit.",
+              "recommendation": "Confirm current ownership and applicability, collect the artifact and weekly publications, then apply both rubrics.",
+              "kind": "persistent-surface"
+            },
+            {
+              "name": "X / Twitter",
+              "url": null,
+              "strategy": null,
+              "brand": null,
+              "status": "Registered category; a specific current artifact or account has not been verified.",
+              "recommendation": "Identify the controlled artifact or account before scoring.",
+              "kind": "persistent-surface"
+            },
+            {
+              "name": "Instagram",
+              "url": null,
+              "strategy": null,
+              "brand": null,
+              "status": "Registered category; a specific current artifact or account has not been verified.",
+              "recommendation": "Identify the controlled artifact or account before scoring.",
+              "kind": "persistent-surface"
+            },
+            {
+              "name": "ProblemSpace",
+              "url": "https://problemspace.io/",
+              "strategy": null,
+              "brand": null,
+              "status": "Registered surface; full review pending. Historical inventory verification is not a current audit.",
+              "recommendation": "Confirm current ownership and applicability, collect the artifact and weekly publications, then apply both rubrics.",
+              "kind": "persistent-surface"
+            },
+            {
+              "name": "Build NC / WNC IC Tech Hub",
+              "url": "https://www.buildnc.io/about",
+              "strategy": null,
+              "brand": null,
+              "status": "Registered surface; full review pending. Historical inventory verification is not a current audit.",
+              "recommendation": "Confirm current ownership and applicability, collect the artifact and weekly publications, then apply both rubrics.",
+              "kind": "persistent-surface"
+            },
+            {
+              "name": "Advanced Building Construction Collaborative",
+              "url": "https://advancedbuildingconstruction.org/",
+              "strategy": null,
+              "brand": null,
+              "status": "Registered surface; full review pending. Historical inventory verification is not a current audit.",
+              "recommendation": "Confirm current ownership and applicability, collect the artifact and weekly publications, then apply both rubrics.",
+              "kind": "persistent-surface"
+            },
+            {
+              "name": "Industrialized Housing Summit event listings",
+              "url": "https://www.same.org/event/2026-texas-industrialized-housing-summit/",
+              "strategy": null,
+              "brand": null,
+              "status": "Registered surface; full review pending. Historical inventory verification is not a current audit.",
+              "recommendation": "Confirm current ownership and applicability, collect the artifact and weekly publications, then apply both rubrics.",
+              "kind": "persistent-surface"
+            },
+            {
+              "name": "Industrialized.org",
+              "url": "https://industrialized.org/",
+              "strategy": null,
+              "brand": null,
+              "status": "Registered surface; full review pending. Historical inventory verification is not a current audit.",
+              "recommendation": "Confirm current ownership and applicability, collect the artifact and weekly publications, then apply both rubrics.",
+              "kind": "persistent-surface"
+            },
+            {
+              "name": "American-Made Challenges participation",
+              "url": "https://americanmadechallenges.org/",
+              "strategy": null,
+              "brand": null,
+              "status": "Registered surface; full review pending. Historical inventory verification is not a current audit.",
+              "recommendation": "Confirm current ownership and applicability, collect the artifact and weekly publications, then apply both rubrics.",
+              "kind": "persistent-surface"
+            },
+            {
+              "name": "Gusto careers board",
+              "url": "https://jobs.gusto.com/boards/adl-ventures-b634c735-e8fc-4ccd-8b33-68f210feba10",
+              "strategy": null,
+              "brand": null,
+              "status": "Registered surface; full review pending. Historical inventory verification is not a current audit.",
+              "recommendation": "Confirm current ownership and applicability, collect the artifact and weekly publications, then apply both rubrics.",
+              "kind": "persistent-surface"
+            },
+            {
+              "name": "External job boards",
+              "url": "https://climatebase.org/",
+              "strategy": null,
+              "brand": null,
+              "status": "Registered surface; full review pending. Historical inventory verification is not a current audit.",
+              "recommendation": "Confirm current ownership and applicability, collect the artifact and weekly publications, then apply both rubrics.",
+              "kind": "persistent-surface"
+            },
+            {
+              "name": "Employer-review sites",
+              "url": "https://www.glassdoor.com/",
+              "strategy": null,
+              "brand": null,
+              "status": "Registered surface; full review pending. Historical inventory verification is not a current audit.",
+              "recommendation": "Confirm current ownership and applicability, collect the artifact and weekly publications, then apply both rubrics.",
+              "kind": "persistent-surface"
+            },
+            {
+              "name": "Presentation decks",
+              "url": "https://docs.google.com/presentation/d/13l8s_NfOKPm3t7noxqTlJtE3cHRQfp2Xf8LhZVx8BP8/edit",
+              "strategy": null,
+              "brand": null,
+              "status": "Registered surface; full review pending. Historical inventory verification is not a current audit.",
+              "recommendation": "Confirm current ownership and applicability, collect the artifact and weekly publications, then apply both rubrics.",
+              "kind": "persistent-surface"
+            },
+            {
+              "name": "Decision briefs",
+              "url": "https://drive.google.com/drive/folders/1hur4PNN-BQaH2fT_yzBgrEwKamftyVgt",
+              "strategy": null,
+              "brand": null,
+              "status": "Registered surface; full review pending. Historical inventory verification is not a current audit.",
+              "recommendation": "Confirm current ownership and applicability, collect the artifact and weekly publications, then apply both rubrics.",
+              "kind": "persistent-surface"
+            },
+            {
+              "name": "Proposals and submissions",
+              "url": "https://drive.google.com/file/d/1-yWM1YYfHyXuy-En5TOxy2KXFv4o4ARp/view",
+              "strategy": null,
+              "brand": null,
+              "status": "Registered surface; full review pending. Historical inventory verification is not a current audit.",
+              "recommendation": "Confirm current ownership and applicability, collect the artifact and weekly publications, then apply both rubrics.",
+              "kind": "persistent-surface"
+            },
+            {
+              "name": "Statements of work and contracts",
+              "url": null,
+              "strategy": null,
+              "brand": null,
+              "status": "Registered category; a specific current artifact or account has not been verified.",
+              "recommendation": "Identify the controlled artifact or account before scoring.",
+              "kind": "persistent-surface"
+            },
+            {
+              "name": "Email signatures and direct email",
+              "url": null,
+              "strategy": null,
+              "brand": null,
+              "status": "Registered category; a specific current artifact or account has not been verified.",
+              "recommendation": "Identify the controlled artifact or account before scoring.",
+              "kind": "persistent-surface"
+            },
+            {
+              "name": "Video calls and webinars",
+              "url": null,
+              "strategy": null,
+              "brand": null,
+              "status": "Registered category; a specific current artifact or account has not been verified.",
+              "recommendation": "Identify the controlled artifact or account before scoring.",
+              "kind": "persistent-surface"
+            },
+            {
+              "name": "Printed collateral and merchandise",
+              "url": null,
+              "strategy": null,
+              "brand": null,
+              "status": "Registered category; a specific current artifact or account has not been verified.",
+              "recommendation": "Identify the controlled artifact or account before scoring.",
+              "kind": "persistent-surface"
+            },
+            {
+              "name": "MassCEC company profile",
+              "url": "https://www.masscec.com/company/adl-ventures-llc",
+              "strategy": null,
+              "brand": null,
+              "status": "Registered surface; full review pending. Historical inventory verification is not a current audit.",
+              "recommendation": "Confirm current ownership and applicability, collect the artifact and weekly publications, then apply both rubrics.",
+              "kind": "persistent-surface"
+            },
+            {
+              "name": "Modular Building Institute directory",
+              "url": "https://members.modular.org/associateservices/Details/adl-ventures-3344057",
+              "strategy": null,
+              "brand": null,
+              "status": "Registered surface; full review pending. Historical inventory verification is not a current audit.",
+              "recommendation": "Confirm current ownership and applicability, collect the artifact and weekly publications, then apply both rubrics.",
+              "kind": "persistent-surface"
+            },
+            {
+              "name": "BuiltWorlds company profile",
+              "url": "https://builtworlds.com/companies/adl-ventures/",
+              "strategy": null,
+              "brand": null,
+              "status": "Registered surface; full review pending. Historical inventory verification is not a current audit.",
+              "recommendation": "Confirm current ownership and applicability, collect the artifact and weekly publications, then apply both rubrics.",
+              "kind": "persistent-surface"
+            },
+            {
+              "name": "Crunchbase",
+              "url": "https://www.crunchbase.com/organization/adl-ventures",
+              "strategy": null,
+              "brand": null,
+              "status": "Registered surface; full review pending. Historical inventory verification is not a current audit.",
+              "recommendation": "Confirm current ownership and applicability, collect the artifact and weekly publications, then apply both rubrics.",
+              "kind": "persistent-surface"
+            },
+            {
+              "name": "The Org",
+              "url": "https://theorg.com/org/adl-ventures",
+              "strategy": null,
+              "brand": null,
+              "status": "Registered surface; full review pending. Historical inventory verification is not a current audit.",
+              "recommendation": "Confirm current ownership and applicability, collect the artifact and weekly publications, then apply both rubrics.",
+              "kind": "persistent-surface"
+            },
+            {
+              "name": "HigherGov / public award profiles",
+              "url": "https://www.highergov.com/awardee/adl-ventures-group-inc-12481484/",
+              "strategy": null,
+              "brand": null,
+              "status": "Registered surface; full review pending. Historical inventory verification is not a current audit.",
+              "recommendation": "Confirm current ownership and applicability, collect the artifact and weekly publications, then apply both rubrics.",
+              "kind": "persistent-surface"
+            },
+            {
+              "name": "Government and partner announcements",
+              "url": "https://www.nyserda.ny.gov/About/Newsroom/2023-Announcements/2023-09-01-Governor-Hochul-Announces-Selection-of-Two-Companies-to-Advance-Climate-Tech-Innovation",
+              "strategy": null,
+              "brand": null,
+              "status": "Registered surface; full review pending. Historical inventory verification is not a current audit.",
+              "recommendation": "Confirm current ownership and applicability, collect the artifact and weekly publications, then apply both rubrics.",
+              "kind": "persistent-surface"
+            },
+            {
+              "name": "Earned media, podcasts, and interviews",
+              "url": "https://www.giatecscientific.com/construction-revolution/episode-023-decarbonizing-the-construction-industry/",
+              "strategy": null,
+              "brand": null,
+              "status": "Registered surface; full review pending. Historical inventory verification is not a current audit.",
+              "recommendation": "Confirm current ownership and applicability, collect the artifact and weekly publications, then apply both rubrics.",
+              "kind": "persistent-surface"
+            }
+          ]
+        }
+      ],
+      "note": "Seven provisional strategy assessments are available from the supplied rubric. No complete branding assessment has been established, so combined quality remains unavailable. Observed analytics contribute 288.64 points; key-person coverage and the full week remain incomplete.",
+      "methodNote": "The operating window is September 3\u201310 [start, end), America/New_York. Analytics use provider date labels September 3\u20139; source timezones are unverified. Historical v0.2 reports use a different methodology and are not comparable.",
+      "kpis": [
+        {
+          "label": "Key LinkedIn people",
+          "value": null,
+          "multiplier": 5,
+          "unit": "people",
+          "formula": "People \u00d7 5",
+          "complete": false,
+          "coverage": "No publishable qualified-person count. VM2 partial coverage and unresolved dates; company participant coverage unverified."
+        },
+        {
+          "label": "YouTube watch time",
+          "value": 54.378221944444455,
+          "multiplier": 5,
+          "unit": "hours",
+          "formula": "Hours \u00d7 5",
+          "complete": false,
+          "coverage": "6 of 7 requested dates: September 3\u20138. September 9 absent.",
+          "sourceJob": "job_CDPv0xk_t2GDdYNM36PY90s7VyoP"
+        },
+        {
+          "label": "ADL website page views",
+          "value": 55,
+          "multiplier": 0.25,
+          "unit": "views",
+          "formula": "Views \u00f7 20 \u00d7 5",
+          "complete": false,
+          "coverage": "September 8 only. Production hostname; preview hosts excluded.",
+          "sourceJob": "job_vG_AFYV-RG3lnV6yntdozTkehRd2"
+        },
+        {
+          "label": "IC Summit page views",
+          "value": 12,
+          "multiplier": 0.25,
+          "unit": "views",
+          "formula": "Views \u00f7 20 \u00d7 5",
+          "complete": false,
+          "coverage": "September 8 only. Production hostname; preview hosts excluded.",
+          "sourceJob": "job_vG_AFYV-RG3lnV6yntdozTkehRd2"
+        }
+      ],
+      "rubrics": [
+        "benchmarks/strategy_marketing_consistency.md",
+        "benchmarks/brand_consistency_benchmark.md",
+        "benchmarks/ADL Brand Guide v0.1.md",
+        "benchmarks/brand_surfaces.md"
+      ]
+    }
+  ]
+}
