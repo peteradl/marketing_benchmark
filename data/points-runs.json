@@ -1213,24 +1213,6 @@
               "kind": "persistent-surface"
             },
             {
-              "name": "X / Twitter",
-              "url": null,
-              "strategy": null,
-              "brand": null,
-              "status": "Registered category; a specific current artifact or account has not been verified.",
-              "recommendation": "Identify the controlled artifact or account before scoring.",
-              "kind": "persistent-surface"
-            },
-            {
-              "name": "Instagram",
-              "url": null,
-              "strategy": null,
-              "brand": null,
-              "status": "Registered category; a specific current artifact or account has not been verified.",
-              "recommendation": "Identify the controlled artifact or account before scoring.",
-              "kind": "persistent-surface"
-            },
-            {
               "name": "ProblemSpace",
               "url": "https://problemspace.io/",
               "strategy": null,
@@ -1449,8 +1431,8 @@
           ]
         }
       ],
-      "note": "Chrome-assisted diagnostic run: visible surface and creative scores added; three company posts identified. Only assessed items contribute to the provisional quality average. Analytics remain the earlier 288.64-point partial observation; no fresh analytics extraction was performed in this browser pass.",
-      "methodNote": "The operating window is September 3\u201310 [start, end), America/New_York. Analytics use provider date labels September 3\u20139; source timezones are unverified. Historical v0.2 reports use a different methodology and are not comparable. Browser-assisted assessments are diagnostic and include explicit publication holds. They are not unattended-agent results or a complete weekly score.",
+      "note": "Chrome-assisted diagnostic run: visible surface and creative scores added; three company posts identified. Analytics were refreshed from BigQuery on September 13. Only assessed items contribute to the provisional quality average.",
+      "methodNote": "The operating window is September 3\u201310 [start, end), America/New_York. Analytics use provider date labels September 3\u20139; source timezones are unverified. YouTube watch time earns 0.5 points per hour. Historical v0.2 reports use a different methodology and are not comparable. Browser-assisted assessments are diagnostic and include explicit publication holds. They are not unattended-agent results or a complete weekly score.",
       "kpis": [
         {
           "label": "Key LinkedIn people",
@@ -1463,33 +1445,33 @@
         },
         {
           "label": "YouTube watch time",
-          "value": 54.378221944444455,
-          "multiplier": 5,
+          "value": 66.6054936111111,
+          "multiplier": 0.5,
           "unit": "hours",
-          "formula": "Hours \u00d7 5",
+          "formula": "Hours \u00d7 0.5",
           "complete": false,
-          "coverage": "6 of 7 requested dates: September 3\u20138. September 9 absent.",
-          "sourceJob": "job_CDPv0xk_t2GDdYNM36PY90s7VyoP"
+          "coverage": "All 7 requested provider dates: September 3\u20139.",
+          "sourceJob": "job_unjxOB2Sl7qdpM69dS6lF42bScdJ"
         },
         {
           "label": "ADL website page views",
-          "value": 55,
+          "value": 172,
           "multiplier": 0.25,
           "unit": "views",
           "formula": "Views \u00f7 20 \u00d7 5",
           "complete": false,
-          "coverage": "September 8 only. Production hostname; preview hosts excluded.",
-          "sourceJob": "job_vG_AFYV-RG3lnV6yntdozTkehRd2"
+          "coverage": "September 8\u20139 only; GA4 export has no September 3\u20137 table. Production hostname; preview hosts excluded.",
+          "sourceJob": "job_y2ihw3Cfs4QxfB0027zN71pNGA5O"
         },
         {
           "label": "IC Summit page views",
-          "value": 12,
+          "value": 34,
           "multiplier": 0.25,
           "unit": "views",
           "formula": "Views \u00f7 20 \u00d7 5",
           "complete": false,
-          "coverage": "September 8 only. Production hostname; preview hosts excluded.",
-          "sourceJob": "job_vG_AFYV-RG3lnV6yntdozTkehRd2"
+          "coverage": "September 8\u20139 only; GA4 export has no September 3\u20137 table. Production hostname; preview hosts excluded.",
+          "sourceJob": "job_y2ihw3Cfs4QxfB0027zN71pNGA5O"
         }
       ],
       "rubrics": [
@@ -1673,7 +1655,7 @@
           "text": "The browser found a September 9 post absent from the connector results, and 23 YouTube videos versus 17 metadata records. Reconcile these inventories and collect dated, qualified LinkedIn engagements."
         }
       ],
-      "reportUrl": "reports/benchmark-browser-run-2026-09-10.md"
+      "reportUrl": "reports/analytics-rerun-2026-09-13.md"
     },
     {
       "id": "2026-09-03_2026-09-09-v0.3",
@@ -2303,24 +2285,6 @@
               "kind": "persistent-surface"
             },
             {
-              "name": "X / Twitter",
-              "url": null,
-              "strategy": null,
-              "brand": null,
-              "status": "Registered category; a specific current artifact or account has not been verified.",
-              "recommendation": "Identify the controlled artifact or account before scoring.",
-              "kind": "persistent-surface"
-            },
-            {
-              "name": "Instagram",
-              "url": null,
-              "strategy": null,
-              "brand": null,
-              "status": "Registered category; a specific current artifact or account has not been verified.",
-              "recommendation": "Identify the controlled artifact or account before scoring.",
-              "kind": "persistent-surface"
-            },
-            {
               "name": "ProblemSpace",
               "url": "https://problemspace.io/",
               "strategy": null,
@@ -2554,9 +2518,9 @@
         {
           "label": "YouTube watch time",
           "value": 54.378221944444455,
-          "multiplier": 5,
+          "multiplier": 0.5,
           "unit": "hours",
-          "formula": "Hours \u00d7 5",
+          "formula": "Hours \u00d7 0.5",
           "complete": false,
           "coverage": "6 of 7 requested dates: September 3\u20138. September 9 absent.",
           "sourceJob": "job_CDPv0xk_t2GDdYNM36PY90s7VyoP"

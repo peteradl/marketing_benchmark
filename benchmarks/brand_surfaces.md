@@ -1,9 +1,9 @@
 ---
 type: marketing-reference
 title: ADL Brand Surfaces
-version: 0.2
+version: 0.4
 created: 2026-08-27
-updated: 2026-08-27
+updated: 2026-09-13
 status: living-inventory
 owner: ADL Marketing
 observation_window: 2026-08-27
@@ -58,8 +58,6 @@ This register lists surfaces where audiences encounter the ADL Ventures brand. I
 | ETHIC Substack | [ETHIC Substack](https://ethic2025.substack.com/) | Operated / shared | Industrialized housing and summit audiences | Publicly accessible |
 | Uptake newsletter | [Uptake Alliance](https://www.uptakealliance.com/) | Operated / shared | Climate-tech startups, companies, investors, partners | Public signup visible |
 | YouTube / video channel | Link not confirmed | Unverified | Event video, thought leadership, website visitors | Channel URL not verified |
-| X / Twitter | Link not confirmed | Unverified | Social audiences | Account URL not verified |
-| Instagram | Link not confirmed | Unverified | Visual and recruiting audiences | Account URL not verified |
 
 ## Program and initiative surfaces
 
