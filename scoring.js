@@ -1,5 +1,5 @@
 export function calculate(run) {
- const items=run.surfaces.flatMap(s=>s.items);
+ const items=run.surfaces.flatMap(s=>s.items).concat(run.surfacePlaceholders||[]);
  const valid=x=>Number.isFinite(x)&&x>=0&&x<=100;
  const scored=items.filter(i=>valid(i.strategy)&&valid(i.brand));
  const quality=scored.length?scored.reduce((n,i)=>n+(i.strategy+i.brand)/2,0)/scored.length:null;
